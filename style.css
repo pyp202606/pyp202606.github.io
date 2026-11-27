@@ -1,0 +1,234 @@
+/* Daniel Pan — Portfolio
+   Pixel-fixed recreation of the Figma frames (1440 × 900 each).
+   Every .page is laid out at exactly 1440px wide; a small script in
+   index.html zooms all pages by window.innerWidth / 1440 so the whole
+   site keeps the original proportions at any window size. */
+
+:root {
+  --cream: #faf6ea;
+  --ink: #1c1a16;
+  --muted: #5a564c;
+  --line: #ddd6c2;
+  --red: #e0574a;
+  --blue: #3b82f6;
+  --highlight-green: #e9f7bd;
+  --highlight-yellow: #f3f6c4;
+  --serif: Georgia, "Times New Roman", "Songti SC", serif;
+  --sans: Arial, "Helvetica Neue", "Microsoft YaHei", sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+html, body { overflow-x: hidden; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--serif);
+}
+
+.page {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+/* ---------- Navigation (100px tall block, divider at y97) ---------- */
+.nav {
+  height: 70px;
+  padding: 30px 70px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links { display: flex; gap: 90px; }
+
+.nav-links a {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: var(--ink);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active { border-bottom-color: var(--red); }
+
+.brand { text-decoration: none; color: var(--ink); font-weight: bold; font-size: 15px; }
+
+.highlight-green { background: var(--highlight-green); padding: 10px 22px; }
+.highlight-yellow { background: var(--highlight-yellow); }
+.highlight-green-soft { background: #edf8d8; }
+
+.nav-divider {
+  margin: 26px 70px 0;
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- Hero: artwork is the original 1440 × 800 crop ---------- */
+.hero-artwork {
+  display: block;
+  width: 1440px;
+  height: 800px;
+}
+
+/* ---------- Shared section bits ---------- */
+.section-body { padding: 0 70px 40px; }
+
+.tag {
+  display: inline-block;
+  font-family: var(--sans);
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  padding: 6px 12px;
+}
+
+.headline-wrap { position: relative; margin-top: 24px; }
+
+h1 {
+  position: relative;
+  font-size: 64px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  position: relative;
+  margin-top: 10px;
+  font-size: 20px;
+  color: var(--muted);
+}
+
+/* hand-drawn pencil circles behind the headline */
+.pencil-circle {
+  position: absolute;
+  top: -70px;
+  left: 340px;
+  width: 940px;
+  height: 340px;
+  pointer-events: none;
+}
+.pencil-circle ellipse {
+  fill: none;
+  stroke: #a39d8d;
+  stroke-width: 2.5;
+  opacity: 0.45;
+}
+.pencil-circle-projects { top: -110px; left: 200px; width: 1200px; }
+
+/* ---------- About collage: exact original pixel geometry ---------- */
+.collage { margin-top: 36px; }
+
+.collage-row { display: flex; margin-bottom: 12px; }
+.collage-row img { display: block; object-fit: cover; border-radius: 2px; }
+
+/* row 1 — y270…478 */
+.row-1 img { height: 208px; }
+.row-1 img:nth-child(1) { width: 404px; }
+.row-1 img:nth-child(2) { width: 299px; margin-left: 25px; }
+.row-1 img:nth-child(3) { width: 558px; margin-left: 14px; }
+
+/* row 2 — y489…668 */
+.row-2 img { height: 180px; }
+.row-2 img:nth-child(1) { width: 305px; }
+.row-2 img:nth-child(2) { width: 463px; margin-left: 17px; }
+.row-2 img:nth-child(3) { width: 236px; margin-left: 17px; }
+.row-2 img:nth-child(4) { width: 243px; margin-left: 17px; }
+
+/* row 3 — y680…825 */
+.row-3 img { height: 145px; }
+.row-3 img:nth-child(1) { width: 640px; }
+.row-3 img:nth-child(2) { width: 640px; margin-left: 18px; }
+
+.interest-tags {
+  margin-top: 30px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-family: var(--sans);
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #2a2721;
+}
+
+/* ---------- Project cards: 408px each, 36px gaps ---------- */
+.projects .section-body { padding-top: 30px; }
+
+.cards {
+  display: grid;
+  grid-template-columns: 408px 408px 408px;
+  gap: 36px;
+  margin-top: 44px;
+}
+
+.card {
+  background: #f8f5ec;
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  display: block;
+  width: 408px;
+  height: 278px;
+  object-fit: cover;
+}
+
+.card-body { padding: 24px 32px 28px; }
+
+.card-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.square { width: 10px; height: 10px; display: inline-block; }
+.square-red { background: var(--red); }
+.square-blue { background: var(--blue); }
+
+.card h2 {
+  margin-top: 16px;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.card-desc {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #37332b;
+}
+
+.card-divider { margin-top: 18px; border-top: 1px solid var(--line); }
+
+.card-footer {
+  margin-top: 14px;
+  font-family: var(--sans);
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #6b6558;
+}
+
+/* empty 4:3 placeholder of the third project */
+.placeholder {
+  background: #f3efe2;
+  border: 1px dashed #c9c2ae;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.placeholder-title { font-size: 22px; color: #8a8474; letter-spacing: 1px; }
+.placeholder-sub { font-family: var(--sans); font-size: 10px; letter-spacing: 1px; color: #a39c88; }

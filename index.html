@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Pan — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ HERO / HOME ============ -->
+  <section class="page hero" id="home">
+    <header class="nav">
+      <nav class="nav-links">
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="mailto:danielpan@moonshotacademy.cn">CONTACT</a>
+      </nav>
+      <a class="brand" href="#home"><span class="highlight-green">DANIEL PAN</span></a>
+    </header>
+    <div class="nav-divider"></div>
+    <img class="hero-artwork" src="images/hero-artwork.png"
+         alt="Hand-drawn illustration of Daniel Pan throwing a giant frisbee: I'm a G11 student from Moonshot Academy. I want to study Sport Science in the future. I'm interested in ultimate frisbee and stats.">
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="page about" id="about">
+    <header class="nav">
+      <nav class="nav-links">
+        <a href="#about" class="active">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="mailto:danielpan@moonshotacademy.cn">CONTACT</a>
+      </nav>
+      <a class="brand" href="#home"><span class="highlight-green">DANIEL PAN</span></a>
+    </header>
+    <div class="nav-divider"></div>
+
+    <div class="section-body">
+      <span class="tag highlight-yellow">ABOUT</span>
+      <div class="headline-wrap">
+        <svg class="pencil-circle" viewBox="0 0 900 360" aria-hidden="true">
+          <ellipse cx="460" cy="185" rx="440" ry="150" transform="rotate(-8 460 185)"/>
+          <ellipse cx="455" cy="180" rx="445" ry="155" transform="rotate(-7 455 180)"/>
+        </svg>
+        <h1>I play. I build. I count.</h1>
+        <p class="subtitle">G11 at Moonshot Academy. Sport science next — frisbee, business until then.</p>
+      </div>
+
+      <div class="collage">
+        <div class="collage-row row-1">
+          <img src="images/about-team.jpg" alt="Ultimate frisbee team photo">
+          <img src="images/about-calligraphy.jpg" alt="Practising Chinese calligraphy">
+          <img src="images/about-flags.jpg" alt="Waving flags at a frisbee tournament">
+        </div>
+        <div class="collage-row row-2">
+          <img src="images/about-friends.jpg" alt="With friends in suits">
+          <img src="images/about-u20.jpg" alt="China U20 Ultimate national team">
+          <img src="images/about-match.jpg" alt="Playing an ultimate frisbee match">
+          <img src="images/about-volleyball.jpg" alt="Playing volleyball">
+        </div>
+        <div class="collage-row row-3">
+          <img src="images/about-honor.jpg" alt="Honor of Kings hero collection">
+          <img src="images/about-gaming.jpg" alt="Teamfight Tactics gameplay">
+        </div>
+      </div>
+
+      <div class="interest-tags">
+        FOOTBALL&nbsp; CALLIGRAPHY&nbsp; VOLLEYBALL&nbsp; ULTIMATE FRISBEE&nbsp; BUSINESS&nbsp; GAMING
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="page projects" id="projects">
+    <header class="nav">
+      <nav class="nav-links">
+        <a href="#about">ABOUT</a>
+        <a href="#projects" class="active">PROJECTS</a>
+        <a href="mailto:danielpan@moonshotacademy.cn">CONTACT</a>
+      </nav>
+      <a class="brand" href="#home"><span class="highlight-green">DANIEL PAN</span></a>
+    </header>
+    <div class="nav-divider"></div>
+
+    <div class="section-body">
+      <span class="tag highlight-green-soft">PROJECTS</span>
+      <div class="headline-wrap">
+        <svg class="pencil-circle pencil-circle-projects" viewBox="0 0 900 360" aria-hidden="true">
+          <ellipse cx="460" cy="185" rx="440" ry="150" transform="rotate(-8 460 185)"/>
+          <ellipse cx="455" cy="180" rx="445" ry="155" transform="rotate(-7 455 180)"/>
+        </svg>
+        <h1>Three things I actually did.</h1>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <img class="card-image" src="images/project-frisbee.jpg" alt="School ultimate frisbee team huddle">
+          <div class="card-body">
+            <p class="card-label"><span class="square square-red"></span>01 · SCHOOL TEAM</p>
+            <h2>School Ultimate<br>Frisbee Team</h2>
+            <p class="card-desc">Mens' team captain. I planned the training sessions and played matches with the squad all season.</p>
+            <div class="card-divider"></div>
+            <p class="card-footer">CAPTAIN · TRAINING + MATCHES</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-image" src="images/project-bpa.jpg" alt="BPA business competition award ceremony">
+          <div class="card-body">
+            <p class="card-label"><span class="square square-blue"></span>02 · COMPETITION</p>
+            <h2>BPA Business<br>Competition</h2>
+            <p class="card-desc">Competed with the school business club. Our team won the BPA National Gold Award.</p>
+            <div class="card-divider"></div>
+            <p class="card-footer">TEAM MEMBER · NATIONAL GOLD</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image placeholder">
+            <span class="placeholder-title">PROJECT IMAGE</span>
+            <span class="placeholder-sub">4:3 · REPLACE WITH PHOTO</span>
+          </div>
+          <div class="card-body">
+            <p class="card-label"><span class="square square-red"></span>03 · MAKERSPACE</p>
+            <h2>Solar Torch<br>Light</h2>
+            <p class="card-desc">A photosensitive solar lamp I built from scratch: light sensor, MCU and a hand-made torch body.</p>
+            <div class="card-divider"></div>
+            <p class="card-footer">SOLO BUILD · SOLAR + MCU</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Keep the original Figma proportions (1440px design width) at any
+    // window size by zooming every page by window.innerWidth / 1440.
+    function fitPages() {
+      var z = document.documentElement.clientWidth / 1440;
+      document.querySelectorAll('.page').forEach(function (p) {
+        p.style.zoom = z;
+      });
+    }
+    window.addEventListener('resize', fitPages);
+    fitPages();
+  </script>
+
+</body>
+</html>
